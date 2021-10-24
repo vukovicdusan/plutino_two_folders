@@ -22,7 +22,7 @@ min-height: 650px; */
 }
 
 .content__section {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: 100%;
   animation: fadeIn .65s forwards; 
   opacity: 0;
