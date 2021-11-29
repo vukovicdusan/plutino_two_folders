@@ -1,14 +1,14 @@
-*  {
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
-.page__wrapper{
-    padding: 40px;
-    height: 100vh;
+.page__wrapper {
+  /* padding: 40px; */
+  height: 100vh;
 }
 
 .content__wrapper {
@@ -21,83 +21,95 @@
   height: 100%;
 }
 .content__section {
-    margin-right: 20px;
-    width: 100%;
-    animation: fadeIn .65s forwards; 
-    opacity: 0;
-    height: 100%;
+  /* margin-right: 20px; */
+  width: 100%;
+  /* animation: fadeIn 2s forwards;
+  opacity: 0; */
+  height: 100%;
+  position: relative;
 }
 
-.content__section:nth-child(2) {
-  animation-delay: .5s;
+
+.content__section--link:nth-child(2) {
+  animation-delay: 0.5s;
 }
 
-.content__section:last-child {
+.content__section--link:last-child {
   animation-delay: 1s;
 }
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
-.content__section:last-child{
-    margin-right: 0;
+.content__section:last-child {
+  margin-right: 0;
 }
 
 .content__section--link {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  height: 100%;
+  animation: fadeIn 2s forwards;
+  opacity: 0;
 }
-
+.placeholder {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #edecea;
+}
 .section__img {
-    background-size: cover;
-    min-width: 240px;
-    min-height: 430px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    height: 100%;
+  background-size: cover;
+  min-width: 240px;
+  min-height: 430px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100%;
 }
 
 .img--1 {
-    background-position: var(--pos-1);
-    background-image: var(--img-1);
-  }
-  
+  background-position: var(--pos-1);
+  background-image: var(--img-1);
+}
+
 .img--2 {
-    background-position: var(--pos-2);
-    background-image: var(--img-2);
-  }
-  
+  background-position: var(--pos-2);
+  background-image: var(--img-2);
+}
+
 .img--3 {
-    background-position: var(--pos-3);
-    background-image: var(--img-3);
-  }
+  background-position: var(--pos-3);
+  background-image: var(--img-3);
+}
 
-  .section__logo__container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-top: 4px;
-    transition: background-color 0.4s linear;
-    height: 186px;
-    min-width: 240px;
-  }
+.section__logo__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* margin-top: 4px; */
+  transition: background-color 0.4s linear;
+  height: 186px;
+  min-width: 240px;
+ 
+}
 
-  .logo__container--1 {
-    background-color: #123c62;
-  }
-  .logo__container--2 {
-    background-color: #494754;
-  }
-  .logo__container--3 {
-    background-color: #2e3638;
-  }
+.logo__container--1 {
+  background-color: #123c62;
+}
+.logo__container--2 {
+  background-color: #494754;
+}
+.logo__container--3 {
+  background-color: #2e3638;
+}
 
 .logo__img,
 .logo__img--hover {
@@ -112,31 +124,41 @@
 }
 
 .logo__img--hover {
-    visibility: hidden;
-    opacity: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.content__section:hover .section__logo__container,
+.content__section:active .section__logo__container {
+  /* background-color: #edecea; */
+  background-color: #fff;
+}
+
+.content__section:hover .logo__img--hover,
+.content__section:active .logo__img--hover {
+  visibility: visible;
+  opacity: 100%;
+}
+
+.content__section:hover .logo__img,
+.content__section:active .logo__img {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .retina_img--1 {
+    background-position: var(--retina__pos-1);
+    background-image: var(--retina__img-1);
   }
 
-.content__section:hover .section__logo__container, 
-.content__section:active .section__logo__container {
-    background-color: #edecea;
+  .retina_img--2 {
+    background-position: var(--retina__pos-2);
+    background-image: var(--retina__img-2);
+  }
+
+  .retina_img--3 {
+    background-position: var(--retina__pos-3);
+    background-image: var(--retina__img-3);
+  }
 }
-
-.content__section:hover .logo__img--hover, 
-.content__section:active .logo__img--hover {
-    visibility: visible;
-    opacity: 100%;
-}
-
-.content__section:hover .logo__img, .content__section:active .logo__img {
-    visibility: hidden;
-    opacity: 0;
-}
-
-
-
-
-
-
-
-
-
