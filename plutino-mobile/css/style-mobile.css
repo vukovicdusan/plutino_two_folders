@@ -152,6 +152,7 @@
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   -webkit-backface-visibility: hidden;
+  height: 14px;
 }
 
 .logo__img--hover {
